@@ -1,0 +1,15 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    schema:
+      - "db/migration"   # Changed to array format as required by sqlc
+    queries:
+      - "db/query"       # Changed to array format as required by sqlc
+    gen:
+      go:
+        package: "db"
+        out: "db/sqlc"
+        emit_json_tags: true
+        emit_prepared_queries: false
+        emit_interface: false
+        emit_exact_table_names: false
