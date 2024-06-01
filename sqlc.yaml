@@ -2,9 +2,9 @@ version: "2"
 sql:
   - engine: "postgresql"
     schema:
-      - "db/migration"   # Changed to array format as required by sqlc
+      - "db/migration"
     queries:
-      - "db/query"       # Changed to array format as required by sqlc
+      - "db/query"   
     gen:
       go:
         package: "db"
